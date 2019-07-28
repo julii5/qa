@@ -1,0 +1,83 @@
+1) Ответы на вопросы:
+1. Фронтенд - это то, что видит пользователь или то, что может читать, выводить и запускать браузер. Например, это веб страница. Пример 
+
+вида тестирования - юзабилити тестирование.
+Бекенд - это всё, что работает на сервере; то что получает запросы от фронтенда и отвечат на них. Пример вида тестирования - регрессионное 
+
+тестирование.
+
+2. Кроссбраузерное тестирование - тестирование отображения и работоспособности продукта в разных браузерах, версиях браузеров и 
+
+операционных системах.
+
+3. Адрес сайта, где запускался сайт, информацию из консоли с панели разработчика, из вкладки network сообщить, на каком именно запросе 
+
+произошла ошибка, куда именно пытались обратиться, с какими параметрами, по какому адресу, какой код и текст ошибки.
+
+4. GET запрос - запрос данных на сервере, который не меняет состояние системы. Вся информация находиться в запросе, т.е. в адресной 
+
+строке.
+POST запрос - запрос для передачи данных на сервер. Если тело запроса, в котором передается информация (текст, картинка и т.д)
+Основное различие - то, что POST запрос меняет информацию на сервере, а GET запрос - нет.
+
+5. API-тестирование - тестирование с помощью готовых автоматизированных инструментов. Т.е. можно отправлять запросы, сохранять их и 
+
+показывать результаты.
+
+2) Ссылка на тест ран.
+https://academyqa.testrail.io/index.php?/runs/view/25&group_by=cases:section_id&group_order=asc
+
+3) Задание по API
+
+1. 
+curl -X GET \
+  https://swapi.co/api/people/4 \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Cookie: __cfduid=daff0fce28663a58e7248bb974c1a88851564055686' \
+  -H 'Postman-Token: 73083f87-6f7d-425f-8123-2d60024de4fe,a346ebe3-eaf9-4792-a7cc-d2f6f30a9bbe' \
+  -H 'Referer: https://swapi.co/api/people/4' \
+  -H 'User-Agent: PostmanRuntime/7.15.2' \
+  -H 'cache-control: no-cache'
+
+2. 
+curl -X POST \
+  http://31.220.42.115:3000/orders/populate \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Type: application/json' \
+  -H 'Cookie: eraph.rememberme.cookie=10004%3Acc2a68d16631ae62cbbf8d2ab62509ad2e7f9313; 
+
+guest_token=Ikd3cUJNRGQtY1JndnNhYnNVSzEwU0ExNTY0MDU2NjQ5MzcxIg%3D%3D--c94098e22c4394ccd0eb13beb1870be14a1bdaef; 
+
+__profilin=p%3Dt; _sandbox_session=Nxl9e%2FRl4utwKyP5HGaJbXK4cJ%2F24nMes3X8vdfXzNsGtsi6WtPWnGjeRVnprgud1ceZ
+
+%2FQOdyismFJvtiCBr2TPlJudA6qMYOsYZEJ9ZtqKOSpVSIhcMIS4%2BQ6CJ3zXtd74UgRxrRLLw14jvhno%3D--IJYM6kF5%2FuqjlHK6--PsU
+
+%2B89ODZFzEGaG8gQ5ZoA%3D%3D,eraph.rememberme.cookie=10004%3Acc2a68d16631ae62cbbf8d2ab62509ad2e7f9313; 
+
+guest_token=Ikd3cUJNRGQtY1JndnNhYnNVSzEwU0ExNTY0MDU2NjQ5MzcxIg%3D%3D--c94098e22c4394ccd0eb13beb1870be14a1bdaef; 
+
+__profilin=p%3Dt; _sandbox_session=Nxl9e%2FRl4utwKyP5HGaJbXK4cJ%2F24nMes3X8vdfXzNsGtsi6WtPWnGjeRVnprgud1ceZ
+
+%2FQOdyismFJvtiCBr2TPlJudA6qMYOsYZEJ9ZtqKOSpVSIhcMIS4%2BQ6CJ3zXtd74UgRxrRLLw14jvhno%3D--IJYM6kF5%2FuqjlHK6--PsU
+
+%2B89ODZFzEGaG8gQ5ZoA%3D%3D; _sandbox_session=%2BNDZF%2FAV1U2L5jZVK2%2FtC%2Bh8DJ32MNtMFbafLFuWLnVPHRox
+
+%2FILw3yOMS2593lXsqbnAWX1zyjwEJK4t%2BJ2mRdfng2Vx4vHSc2yhCcZGpRcIKspdIdHy%2BGgBt%2Bhv1bug8CdmhEeeSUyNPgETPA8%3D--
+
+XjGbG7acvyJv4nlK--7sjP1aQXG1bBXo8boLRkWg%3D%3D; __profilin=p%3Dt' \
+  -H 'Postman-Token: 0cd920c4-15a0-46e9-9a16-ac9b2984ecc8,8ced554d-a20f-4dae-b7fe-f8d644d9db49' \
+  -H 'Referer: http://31.220.42.115:3000/orders/populate' \
+  -H 'User-Agent: PostmanRuntime/7.15.2' \
+  -H 'cache-control: no-cache' \
+  -d '{
+"variant_id": "6",
+"quantity": 1
+}'
+
+3.
