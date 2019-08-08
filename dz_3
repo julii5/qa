@@ -1,0 +1,34 @@
+1. Базы данных:
+
+1. SELECT * FROM Products;
+2. SELECT * FROM Products WHERE prod_price > '4';
+3. SELECT * FROM Customers WHERE cust_name != 'Fun4All';
+4. SELECT * FROM OrderItems ORDER BY item_price DESC;
+5. INSERT INTO Products (prod_id, vend_id, prod_name, prod_price, prod_desc)
+VALUES ('TEST03', 'TR01', 'Bag toy', '5.45', 'Bag toy');
+
+2. Api:
+
+POST /signup HTTP/1.1
+Host: 31.220.42.115:3000
+Cookie: __profilin=p%3Dt; guest_token=IkVTbUtwd1J0SXNjQW13VElSUTZYOGcxNTY1Mjg2ODk4MDA3Ig%3D%3D--8ebfc78899e4d74b891a9e2e9ad206487de3cb8b; _sandbox_session=EW%2FwXBcMJiJg8vUW1DGDmyVzEf5WyccCGy4X46%2B%2Fx2e9M%2BTerDVhqTMsF549SVsbEgUGYAfNipEZ3z9uP8gjBed%2FC8FtW7oj4f9C8GD79fy8H6nzisxOVgc1UTdzoAmghprm7fS5dwgJjOqu83U%3D--I0eA0jPELisIR38D--Z6OPJsh1A%2B5DSFkaAGVr2A%3D%3D,__profilin=p%3Dt; guest_token=IkVTbUtwd1J0SXNjQW13VElSUTZYOGcxNTY1Mjg2ODk4MDA3Ig%3D%3D--8ebfc78899e4d74b891a9e2e9ad206487de3cb8b; _sandbox_session=EW%2FwXBcMJiJg8vUW1DGDmyVzEf5WyccCGy4X46%2B%2Fx2e9M%2BTerDVhqTMsF549SVsbEgUGYAfNipEZ3z9uP8gjBed%2FC8FtW7oj4f9C8GD79fy8H6nzisxOVgc1UTdzoAmghprm7fS5dwgJjOqu83U%3D--I0eA0jPELisIR38D--Z6OPJsh1A%2B5DSFkaAGVr2A%3D%3D; __profilin=p%3Dt; guest_token=Ikp0MWN1M3p1RzRwREttR01NUUdjcXcxNTY0MzE3ODQzMTU1Ig%3D%3D--5800708d9826031155c8ee52ba04e183c7b63dbb; _sandbox_session=Jx5Kbq1Ud8Yih4yesqLWdRUHJd5DhgF7KpcUZfDCy10Dqf%2FSX2HwXghgKHUzUlhsD9xSo19LLJxCayQztkkKxAv%2FSyED0bSUnmT5szEZlDQ298ZFfwlbrRWy9APTlOLdW%2FZQaD6fAOU%2FVKM6rrDyoCVNmdcvhcOb9Bt%2B9GNXR3%2F00C96S2o0CKGmN4TTR9K1ucMh6SD0U%2FuTn%2Fa98DNmnaXIRTeMYOSqTw7YuKHxmlklhxBd4d3tj13T6R5%2BRl6E08j7GNVMp%2FRHqrrKKxU2MmZx587zClAcJu2dRC07KCCkaGs1DvrAREMv04Wo5WDJmXAgnxPqnlM2KhX5YlWiAZs0NZ7cjH67Y6apUDDMLodKjvwctyfW5qKj--LPfJFjlXcajPw4jj--aF%2Bx1CBcBeKAVlQ%2Bhwz8Jg%3D%3D
+Content-Type: application/x-www-form-urlencoded
+User-Agent: PostmanRuntime/7.15.2
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 79edf07f-5b88-4957-8ae5-fab61c90a260,1bcf8391-418f-4e58-bf2f-5110e3e7a979
+Accept-Encoding: gzip, deflate
+Referer: http://31.220.42.115:3000/signup
+Connection: keep-alive
+cache-control: no-cache
+
+utf8=%E2%9C%93&authenticity_token=9lqaj2SL%2BtD%2F%2FdBTtgqpVnqtn6ge%2BnmgLETmQkiomAkDfVykDUhXc9DWnsS2wY%2FK0ODw2GAhAr%2BwFabNfu8bRA%3D%3D&spree_user%5Bemail%5D=testqa00000047%40mailinator.com&spree_user%5Bpassword%5D=123456&spree_user%5Bpassword_confirmation%5D=123456&commit=Create
+
+3. Selenium Webdriver:
+
+from selenium import webdriver
+driver = webdriver.Chrome()
+driver.get('http://31.220.42.115:3000/login')
+driver.find_element_by_id("spree_user_email").send_keys('testqa00000047@mailinator.com')
+driver.find_element_by_id("spree_user_password").send_keys('123456')
+driver.find_element_by_css_selector('input[value="Login"]').click()
